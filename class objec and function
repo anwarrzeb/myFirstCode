@@ -1,3 +1,4 @@
+#creat car class
 class cars:
     def __init__(self, name, model, price, speed, hours):
         self.name = name
@@ -6,11 +7,24 @@ class cars:
         self.speed = speed
         self.hours = hours
         calculate_milage = 0
+# calculate millage
     def milage(self):
         milage1 = self.speed *self.hours
         return milage1
+# price decrease function
+    def price_decrease(self):
+        price_decrease = self.price - 500
+        return price_decrease
 
+#object creation
 car1= cars("toyota", 2022, 50000,350,100)
 car2 = cars("ferrari", 2020, 35000,400, 200)
-print(f"the speed of {car2.name} is {car2.speed} and its millage is {car2.milage()} km")
-print(f"the speed of {car1.name} is {car1.speed} and its millage is {car1.milage()} km")
+if car1.price > 3000:
+    print("can you afford this car?")
+else:
+    print("yes you can")
+
+print(f"the speed of {car2.name} is {car2.speed} and its millage is {car2.milage()} km while the speed of {car1.name} is {car1.speed} and its millage is {car1.milage()}")
+
+print(car2.price)
+print(car2.price_decrease())
