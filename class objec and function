@@ -1,0 +1,16 @@
+class cars:
+    def __init__(self, name, model, price, speed, hours):
+        self.name = name
+        self.model = model
+        self.price = price
+        self.speed = speed
+        self.hours = hours
+        calculate_milage = 0
+    def milage(self):
+        milage1 = self.speed *self.hours
+        return milage1
+
+car1= cars("toyota", 2022, 50000,350,100)
+car2 = cars("ferrari", 2020, 35000,400, 200)
+print(f"the speed of {car2.name} is {car2.speed} and its millage is {car2.milage()} km")
+print(f"the speed of {car1.name} is {car1.speed} and its millage is {car1.milage()} km")
