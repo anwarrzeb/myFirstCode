@@ -1,0 +1,29 @@
+
+#create employee class
+class Employee:
+    def __init__(self, name, position, salary, rate, time):
+        self.name = name
+        self.position =position
+        self.salary = salary
+        self.rate = rate
+        self.time = time
+ #calculate overtime
+    def over_time(self):
+        over_time= self.rate*self.time
+        return over_time
+# calculate total salry = salary + overtime
+    def total_salary(self):
+        total_salary = self.salary + self.over_time()
+        return total_salary
+#create object of class
+emp1= Employee("amer","ECO", 25000, 45, 20)
+emp2= Employee("aman","Manager", 25000, 30, 20)
+emp3= Employee("zeb","worker", 30000, 15, 20)
+emp4= Employee("yasir","Phm", 15000, 25, 20)
+emp5= Employee("tosef","DG", 35000, 35, 20)
+
+print(f"employ name: {emp1.name}, total salary: {emp1.total_salary()}, Over time: {emp1.over_time()}, Salary: {emp1.salary}")
+print(f"employ name: {emp2.name}, total salary: {emp2.total_salary()}, Over time: {emp2.over_time()}, Salary: {emp2.salary}")
+print(f"employ name: {emp3.name}, total salary: {emp3.total_salary()}, Over time: {emp3.over_time()}, Salary: {emp3.salary}")
+print(f"employ name: {emp4.name}, total salary: {emp4.total_salary()}, Over time: {emp4.over_time()}, Salary: {emp4.salary}")
+print(f"employ name: {emp5.name}, total salary: {emp5.total_salary()}, Over time: {emp5.over_time()}, Salary: {emp5.salary}")
