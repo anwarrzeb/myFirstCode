@@ -1,0 +1,38 @@
+# create a classs
+class Employ():
+    def __init__(self, name, age, salary, time):
+        self.name = name
+        self.age = age
+        self.salary = salary
+        self.time = time
+
+    # function to calculate tada
+    def tada(self):
+        tada = 7500 * self.time
+        return tada
+
+    # calclate total salary
+    def total_salary(self):
+        total_salary = self.salary + self.tada()
+        return total_salary
+
+    # calculate tax_net
+    def tax_net(self):
+        tax_net = self.total_salary() * 0.1
+        return int(tax_net)
+#calculate taxed salary
+    def taxed_salary(self):
+        net_salary = self.total_salary() + self.tax_net()
+        return net_salary
+
+#create instance of class
+# emp1 = Employ("anwar", 25, 75000, 5)
+name = input("enter your name: ")
+age = int(input("enter your age: "))
+salary = int(input(" enter your salar: "))
+time = int(input("enter ourtime"))
+emp1 = Employ(name, age, salary, time)
+emp2 = Employ(name, age, salary, time)
+
+print(f"Name: {emp1.name}, you tax slary is {emp1.taxed_salary()}, your tax is {emp1.tax_net()}, salary befor tax: {emp1.total_salary()}")
+print(f"Name: {emp2.name}, you tax slary is {emp2.taxed_salary()}, your tax is {emp2.tax_net()}, salary befor tax: {emp2.total_salary()}")
