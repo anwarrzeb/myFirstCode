@@ -1,0 +1,16 @@
+import random
+
+num_sim = 10
+match_count = 0
+
+for i in range(num_sim):
+    x = random.randint(1, 10)
+    y = random.randint(1, 10)
+
+    if x == y:
+        print("Matched:", x)
+        match_count += 1
+    else:
+        print("Not matched:", x, y)
+
+print("Total matches:", match_count)
